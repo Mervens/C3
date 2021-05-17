@@ -1,6 +1,6 @@
 // Assignment code here
-
-var charSet = [
+let randChar = "";
+let characterSet = [
   {
   char: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
   name: "Letters",
@@ -16,7 +16,6 @@ var charSet = [
   }
 ]
 
-
 var userI = "";
 var finalP = "";
 var display = "";
@@ -25,18 +24,31 @@ window.alert("Welcome to the Password Generator Challenge Assignment!");
 
 function userPrompts() {
 alert("Let's begin!");
-}
-write.onclick = userPrompts();{
-    alert("Acceptable units for this generator are letters, numbers, and/or symbols.");
+alert("Acceptable units for this generator are letters, numbers, and/or symbols.");
 alert("Let's set the length of your password.");
 var passL = prompt("What length do you want? 8-128 characters.");
-
+if (passL > 8 && passL < 128) {
+    characterSet.forEach(set => {
+    const insChar = (prompt('Do you want to use ${set.name}?')).toLowerCase();
+    if (insChar === "yes" || insChar === "y") {
+        set.use = true;
+    }
+    if(set.use){
+        randChar = randChar + set.char;
+    }
+    });
+ 
+}else{
+alert("Your password does not fit between 8-128. Try again.");
+return
 }
+};
 
-write.onclick = userPrompts();
   
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+
+document.getElementById('#generate').onclick =  userPrompts();
 
 // Write password to the #password input
 function writePassword() {
