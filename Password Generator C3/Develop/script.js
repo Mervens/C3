@@ -32,7 +32,7 @@ const generatePassword = () => {
 
 if (passL > 8 && passL < 128) {
     characterSet.forEach(set => {
-    const insChar = (prompt(`Do you want to use ${set.name}?`)).toLowerCase();
+    const insChar = (prompt(`Do you want to use ${set.name}?`));
     if (insChar === "Yes" || insChar === "Y" || insChar === "yes" || insChar === "y") {
         set.use = true;
     }else{
@@ -48,6 +48,7 @@ if (passL > 8 && passL < 128) {
     }
     }
     );
+
     }else{
         alert("Your password does not fit between 8-128. Try again.");
         return
@@ -66,9 +67,9 @@ else {
     alert("There are no characters inputted. Password cannot be generated.");
 }
 }
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-
 
 
 // Write password to the #password input
@@ -79,7 +80,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
 
 
 // Add event listener to generate button
