@@ -10,8 +10,9 @@ They will get greeted with an alert.
 
 ![C3 - 1](https://user-images.githubusercontent.com/82620500/118429676-35e2a300-b6a0-11eb-898a-83c4d765855d.png)
 
-When they click on Generate Password, prompts will appear as such:  
 ![C3 - 2](https://user-images.githubusercontent.com/82620500/118443857-69cac200-b6ba-11eb-915d-2cb24352790a.png)
+
+When they click on Generate Password, prompts will appear as such:  
 
 ![C3 - 3](https://user-images.githubusercontent.com/82620500/118443859-6afbef00-b6ba-11eb-91d1-9f94800ea8ae.png)
 
