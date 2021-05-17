@@ -1,5 +1,5 @@
 // Assignment code here
-let randChar = "";
+let randChar = [];
 let characterSet = [
   {
   char: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -16,27 +16,24 @@ let characterSet = [
   }
 ]
 
-var userI = "";
-var finalP = "";
-var display = "";
+var userI = [];
+var finalP = [];
+var display = [];
 
 window.alert("Welcome to the Password Generator Challenge Assignment!");
-
-function userPrompts() {
-alert("Let's begin!");
-alert("Acceptable units for this generator are letters, numbers, and/or symbols.");
-alert("Click Generate Password to begin.");
-}
+window.alert("Let's begin!");
+window.alert("Acceptable units for this generator are letters, numbers, and/or symbols.");
+window.alert("Click Generate Password to begin.");
 
 
-const generate = () => {
-    let passL = prompt("What length do you want? 8-128 characters.");
+const generatePassword = () => {
+    let passL = parseInt(prompt("What length do you want? 8-128 characters."));
     let passS = "";
 
 if (passL > 8 && passL < 128) {
     characterSet.forEach(set => {
     const insChar = (prompt(`Do you want to use ${set.name}?`)).toLowerCase();
-    if (insChar === "yes" || insChar === "y") {
+    if (insChar === "Yes" || insChar === "Y" || insChar === "yes" || insChar === "y") {
         set.use = true;
     }else{
         alert("Then we will not use this item.");
@@ -44,6 +41,7 @@ if (passL > 8 && passL < 128) {
     }
     if(set.use){
         randChar = randChar + set.char;
+
     }else{
         alert("You have not entered any conditions. This is invalid.");
         return
@@ -55,11 +53,14 @@ if (passL > 8 && passL < 128) {
         return
     }
 
+
 if (randChar !== "") {
     for (i = 1; i <= passL; i++) {
-        password = passS + randChar.charAt(Math.floor(Math.random() * Math.floor((randChar.length) - 1)));
+     userI = passS + randChar.charAt(Math.floor(Math.random() * Math.floor((randChar.length) - 1)));
+     finalP.push(userI);
     }
     document.getElementById("password").value = passS;
+    return finalP.join("");
 }
 else {
     alert("There are no characters inputted. Password cannot be generated.");
@@ -72,23 +73,14 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-    userI = "";
-    finalP = "";
-    display = "";
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
-    bclick = document.getElementById('generate');
-    bclick.onclick = clicked;
 
   passwordText.value = password;
 
 }
 
-function clicked() {
-     const div = document.createElement('div');
-     div.textContent = 'Generated';
-     document.body.appendChild(div);
-}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
