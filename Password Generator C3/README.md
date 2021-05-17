@@ -5,7 +5,8 @@ What we have here is a working password generator that was quite the effort to c
 
 ### How does this work?
 
-The user enters the page at the ## link: **https://mervens.github.io/Password-Generator-C3/.**
+The user enters the page at the 
+## Link: **https://mervens.github.io/Password-Generator-C3/.**
 
 They will get greeted with an alert. 
 
