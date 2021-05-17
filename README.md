@@ -18,7 +18,7 @@ They will get greeted with an alert.
 
 ![C3 - 3](https://user-images.githubusercontent.com/82620500/118443859-6afbef00-b6ba-11eb-91d1-9f94800ea8ae.png)
 
-For all prompts, Yes, Y, yes, or y progress it. Any other values will be considered "no."
+For all prompts, Yes, Y, yes, or y progress it. *Any other values will be considered "no."*
 
 ### Prompts for Letters
 
@@ -41,3 +41,4 @@ For all prompts, Yes, Y, yes, or y progress it. Any other values will be conside
 ![C3 - 8](https://user-images.githubusercontent.com/82620500/118444204-d34ad080-b6ba-11eb-821d-81f38900b6b1.png)
 
 
+#Thanks for reading. This was a good learning experience.
